@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   return (
     <div className="w-82.5 h-182.5 flex items-start  m-auto  justify-center bg-gray-50 border border-gray-200  ">
       <div className="flex flex-col mt-10 ml-4 mr-4 items-start  mb-4">
@@ -31,7 +33,10 @@ function Login() {
             />
           </div>
         </div>
-        <button className="bg-violet-400 px-4 py-2 w-full mt-4 text-white font-normal rounded-md hover:bg-violet-400">
+        <button
+          onClick={() => navigate("/account")}
+          className="bg-violet-400 px-4 py-2 w-full mt-4 text-white font-normal rounded-md hover:bg-violet-400"
+        >
           Login
         </button>
       </div>
